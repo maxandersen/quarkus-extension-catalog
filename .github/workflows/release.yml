@@ -20,7 +20,7 @@ jobs:
         uses: jbangdev/jbang-action@master
         with:
           script: .github/workflows/quarkusindexcatalog.java 
-          args: --repository-path=. --output-file=app/registry.json
+          scriptargs: --repository-path=. --output-file=app/registry.json
 
       - name: gzip registry.json
         run: cd app && gzip -k registry.json
